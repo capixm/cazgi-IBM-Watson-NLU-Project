@@ -75,7 +75,7 @@ class App extends React.Component {
     return (  
       <div className="App">
         <br/><br/>
-        <label for="textinput">Insert a valid URL:</label>
+        <label for="textinput">Insert a valid URL:</label><br/>
         {this.state.innercomp}
         <br/>
         <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
