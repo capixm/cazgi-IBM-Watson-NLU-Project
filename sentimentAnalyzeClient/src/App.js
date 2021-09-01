@@ -10,7 +10,7 @@ class App extends React.Component {
   value of the state, will be returned. The initial input mode
   is set to text
   */
-  state = {innercomp:<textarea rows="1" cols="50" id="textinput"/>,
+  state = {innercomp:<textarea rows="1" cols="50" id="textinput" autofocus/>,
            mode: "url",
            sentimentOutput:[],
            sentiment:true
@@ -30,7 +30,7 @@ class App extends React.Component {
       mode = "text"
       rows = 4
     }
-      this.setState({innercomp:<textarea rows={rows} cols="50" id="textinput"/>,
+      this.setState({innercomp:<textarea rows={rows} cols="50" id="textinput" autofocus/>,
       mode: mode,
       sentimentOutput:[],
       sentiment:true
@@ -75,7 +75,8 @@ class App extends React.Component {
     return (  
       <div className="App">
         <br/><br/>
-        URL: {this.state.innercomp}
+        <label for="textinput">Insert a valid URL:</label>
+        {this.state.innercomp}
         <br/>
         <button className="btn-primary" onClick={this.sendForEmotionAnalysis}>Analyze Emotion</button>
         <br/>
